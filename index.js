@@ -5,8 +5,13 @@ const express = require('express');
 const app = express();
 
 const { mongoConnect } = require('./src/services/mongo');
-const { start } = require('repl');
+const { createHandler } = require('graphql-http/lib/use/express');
+
+const graphQLSchema = require("./src/schemas/schemas.graphql");
+
 const PORT = process.env.PORT || 8000;
+
+app.use("/graphql", createHandler({ schema: graphQLSchema }));
 
 const server = http.createServer(app);
 

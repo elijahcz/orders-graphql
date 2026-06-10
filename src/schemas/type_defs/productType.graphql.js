@@ -1,4 +1,5 @@
-const { GraphQLObjectType, GraphQLString, GraphQLFloat, GraphQLList, GraphQLInt, GraphQLID } = require('graphql');
+const graphql = require('graphql');
+const { GraphQLObjectType, GraphQLInt, GraphQLString, GraphQLFloat, GraphQLID } = graphql;
 
 const ProductType = new GraphQLObjectType({
     name: "Product",
@@ -7,13 +8,13 @@ const ProductType = new GraphQLObjectType({
         brand: { type: GraphQLString },
         category: { type: GraphQLString },
         description: { type: GraphQLString },
-        discountPercetage: { type: GraphQLFloat },
-        images: { type: new GraphQLList(ImageType) },
-        price: { type: graphQLFloat },
-        rating: { type: graphQLFloat },
+        discountPercentage: { type: GraphQLFloat },
+        images: { type: GraphQLString },
+        price: { type: GraphQLFloat },
+        rating: { type: GraphQLFloat },
         stock: { type: GraphQLInt },
-        thumbnail: { type: graphQLFloat },
-        title: { type: graphQLFloat },
+        thumbnail: { type: GraphQLString },
+        title: { type: GraphQLString },
     }
 });
 
