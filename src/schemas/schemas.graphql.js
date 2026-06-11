@@ -1,9 +1,5 @@
 const { GraphQLObjectType, GraphQLString, GraphQLFloat, GraphQLList, GraphQLInt, GraphQLID, GraphQLBoolean, GraphQLSchema, parseSchemaCoordinate } = require('graphql');
 
-// const { Product } = require("../models/products.mongoose");
-// const { Order } = require("../models/orders.mongoose");
-const { User } = require("../models/user.mongoose");
-
 const { ProductType } = require("../schemas/type_defs/productType.graphql");
 const { OrderType } = require("../schemas/type_defs/orderType.graphql");
 const { UserType } = require("../schemas/type_defs/userType.graphql");
