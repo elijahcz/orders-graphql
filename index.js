@@ -1,13 +1,13 @@
-const http = require('http');
 require('dotenv').config();
 
+const http = require('http');
 const express = require('express');
-const app = express();
-
-const { mongoConnect } = require('./src/services/mongo');
 const { createHandler } = require('graphql-http/lib/use/express');
 
+const { mongoConnect } = require('./src/services/mongo');
 const graphQLSchema = require("./src/schemas/schemas.graphql");
+
+const app = express();
 
 const PORT = process.env.PORT || 8000;
 
